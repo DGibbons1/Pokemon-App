@@ -10,19 +10,23 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';   //Import bootstrap module
 import { HttpModule } from '@angular/http';   //Import Http module to allow http requests
 import { CurrentPokemonService } from './services/current-pokemon.service'; //Import the Current Pokemon Service
+import { FormsModule } from '@angular/forms'; //Import FormsModule to allow ngModel function
+import { PokemonFilter } from './pipes/filterpipe'; //import Filter to search pokemon list
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     ListPageComponent,
-    DetailPageComponent
+    DetailPageComponent,
+    PokemonFilter
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,   //Import bootstrap module
-    HttpModule
+    HttpModule,   //Import Http module to allow http requests
+    FormsModule  //Import FormsModule to allow ngModel function
   ],
   providers: [CurrentPokemonService],  //Add CurrentPokemon module to the providers array so that it is globally accessible
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
+<input style="width:100%" name="search" [(ngModel)]="searchTerm" placeholder="Seach Pokemon" autocomplete="off"/>
 <table class='table table-hover table-fixed'>
   <tbody>
-    <tr *ngFor="let pokemon of pokemonList" (click)="openPokemonDetail(pokemon.url)">
+    <tr *ngFor="let pokemon of pokemonList | PokemonFilter : searchTerm" (click)="openPokemonDetail(pokemon.url)">
         <td style="width:100%">{{ pokemon.name }}</td>
     </tr>
   </tbody>
