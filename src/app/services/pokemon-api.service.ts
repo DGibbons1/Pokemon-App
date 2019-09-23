@@ -15,4 +15,9 @@ export class PokemonAPIService {
     return  this.http.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=100")
     .pipe(map(obs => obs.json()));
   }
+
+  //Call the Pokemon API to get a details about the selected pokemon.
+  public getPokemonDetail(url: string): Observable<any>{
+    return  this.http.get(url).pipe(map(obs => obs.json()));      
+  }
 }

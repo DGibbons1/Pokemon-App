@@ -1,3 +1,7 @@
-<ul class="list-group">
-    <li class="list-group-item"*ngFor="let pokemon of pokemonList" (click)="alert(pokemon.name)">{{ pokemon.name }}</li>
-</ul>
+<table class='table table-hover table-fixed'>
+  <tbody>
+    <tr *ngFor="let pokemon of pokemonList" (click)="openPokemonDetail(pokemon.url)">
+        <td style="width:100%">{{ pokemon.name }}</td>
+    </tr>
+  </tbody>
+</table>
