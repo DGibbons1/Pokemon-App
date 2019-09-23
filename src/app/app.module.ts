@@ -7,6 +7,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ListPageComponent } from './list-page/list-page.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';   //Import bootstrap module
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,8 @@ import { DetailPageComponent } from './detail-page/detail-page.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule   //Import bootstrap module
   ],
   providers: [],
   bootstrap: [AppComponent]
