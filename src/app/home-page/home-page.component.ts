@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ac: AppComponent) { }
 
   ngOnInit() {
+  }
+
+  //Open the list page when the Go buttom=n is pressed.
+  public openListPage(){
+    this.ac.openListPage();
   }
 
 }

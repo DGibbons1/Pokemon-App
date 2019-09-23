@@ -1,3 +1,3 @@
 <ul class="list-group">
-    <li class="list-group-item" *ngFor="let pokemon of pokemonList">{{ pokemon.name }}</li>
+    <li class="list-group-item"*ngFor="let pokemon of pokemonList" (click)="alert(pokemon.name)">{{ pokemon.name }}</li>
 </ul>
