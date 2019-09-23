@@ -8,6 +8,7 @@ import { ListPageComponent } from './list-page/list-page.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';   //Import bootstrap module
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';   //Import bootstrap modul
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule   //Import bootstrap module
+    NgbModule,   //Import bootstrap module
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
