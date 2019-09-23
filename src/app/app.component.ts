@@ -21,7 +21,7 @@ export class AppComponent {
   }
 
   //Method to open the Pokemon detail page
-  public openDetailPage(url: string){
+  public openDetailPage(){
     this.currentPage = "detail-page";
   }
 

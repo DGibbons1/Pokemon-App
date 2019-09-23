@@ -1,1 +1,10 @@
-<p>detail-page works!</p>
+<img [src]='imgURL' alt="Pokemon Image" height="96" width="96">
+<h1>{{ name }}</h1>
+<h4>Types:</h4>
+<ul>
+    <li *ngFor="let type of types">{{ type.type.name }}</li>
+</ul>
+<h4>Moves:</h4>
+<ul>
+    <li *ngFor="let move of moves">{{ move.move.name }}</li>
+</ul>
