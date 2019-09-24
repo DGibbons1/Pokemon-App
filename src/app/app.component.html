@@ -1,18 +1,19 @@
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
-      <div class="container"> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <button type="button" class="btn btn-primary" routerLink="home">PokeApp</button>
+            <li class="nav-item active" id="naveItem1">
+              <a class="nav-link" routerLink="home">PokeApp</a>
             </li>
-            <li class="nav-item">
-                <button type="button" class="btn btn-primary" routerLink="home/list">List</button>
+            <li *ngIf="pokemonBtnVisible" class="nav-item" id="naveItem2">
+              <a class="nav-link" routerLink="home/list">> Pokemon</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+
   <div class="container"><!-- Main Page Content -->     
    
     <router-outlet></router-outlet> <!-- Router Outlet to display components-->

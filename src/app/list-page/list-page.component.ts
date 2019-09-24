@@ -13,7 +13,10 @@ export class ListPageComponent implements OnInit {
   public pokemonList: string[];
   public searchTerm: string; //ngModel to store the current data entered into the search term
 
-  constructor(private pokemonAPI: PokemonAPIService, private ac: AppComponent, private currentPokemon: CurrentPokemonService) { }
+  constructor(private pokemonAPI: PokemonAPIService, private ac: AppComponent, private currentPokemon: CurrentPokemonService) { 
+    //Set the pokemonBtnVisible variable to visible
+    this.ac.setPokemonBtnVisibility(true);
+  }
 
   ngOnInit() {
     //Call the pokemon API to get a list of pokemon.
