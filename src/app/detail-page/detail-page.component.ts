@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CurrentPokemonService } from '../services/current-pokemon.service';  //Import the current pokemon shared service
 import { PokemonAPIService } from '../services/pokemon-api.service';
 import { ActivatedRoute } from '@angular/router';   //Import actived route to get teh parameter passed during routing
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-detail-page',
@@ -17,7 +18,10 @@ export class DetailPageComponent implements OnInit {
   public moves: string[];
   private pokemonJSON: any;
 
-  constructor(private currentPokemon: CurrentPokemonService, private pokemonAPI: PokemonAPIService, private route: ActivatedRoute) {}
+  constructor(private currentPokemon: CurrentPokemonService, private pokemonAPI: PokemonAPIService, private route: ActivatedRoute, private ac: AppComponent) {
+        //Set the nav to detail page
+        this.ac.setNavToDetailPage();
+  }
 
   ngOnInit() {
     //Get the pokemon list from the shared service and store in an instance variable

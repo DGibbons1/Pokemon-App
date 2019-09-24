@@ -15,7 +15,7 @@ export class ListPageComponent implements OnInit {
 
   constructor(private pokemonAPI: PokemonAPIService, private ac: AppComponent, private currentPokemon: CurrentPokemonService) { 
     //Set the pokemonBtnVisible variable to visible
-    this.ac.setPokemonBtnVisibility(true);
+    this.ac.setNavToListPage();
   }
 
   ngOnInit() {

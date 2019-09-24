@@ -9,8 +9,8 @@ import { AppComponent } from '../app.component';
 export class HomePageComponent implements OnInit {
 
   constructor(public ac: AppComponent) {
-    //Set the pokemonBtnVisible variable to invisible
-    this.ac.setPokemonBtnVisibility(false);
+    //Set that nav to home page
+    this.ac.setNavToHomePage();
    }
 
   ngOnInit() {

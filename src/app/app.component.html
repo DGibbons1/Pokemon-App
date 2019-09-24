@@ -3,11 +3,14 @@
       <div class="container">    
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active" id="naveItem1">
+            <li [ngClass]="{'nav-item': navConditionTrue,'active': isHomePage}">
               <a class="nav-link" routerLink="home">PokeApp</a>
             </li>
-            <li *ngIf="pokemonBtnVisible" class="nav-item" id="naveItem2">
+            <li *ngIf="pokemonBtnVisible" [ngClass]="{'nav-item': navConditionTrue,'active': isListPage}">
               <a class="nav-link" routerLink="home/list">> Pokemon</a>
+            </li>
+            <li *ngIf="detailBtnVisible" [ngClass]="{'nav-item': navConditionTrue,'active': isDetailPage}">
+                <a class="nav-link">> Detail</a>
             </li>
           </ul>
         </div>
