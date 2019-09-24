@@ -10,10 +10,13 @@ export class CurrentPokemonService {
 
   constructor() { }
 
+  //Method to set the value of the Pokemon List variable
   public setpokemonList(pokemonList: string[]){
     this.pokemonList = pokemonList;
   }
 
+
+  //Method to return the Pokemon List variable
   public getpokemonList(): string{
     return JSON.stringify(this.pokemonList);
   }

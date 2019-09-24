@@ -10,7 +10,7 @@ import { CurrentPokemonService } from '../services/current-pokemon.service';
 })
 export class ListPageComponent implements OnInit {
 
-  public pokemonList: string[];
+  public pokemonList: string[]; //Variable to store the data returned from the Pokemon API
   public searchTerm: string; //ngModel to store the current data entered into the search term
 
   constructor(private pokemonAPI: PokemonAPIService, private ac: AppComponent, private currentPokemon: CurrentPokemonService) { 

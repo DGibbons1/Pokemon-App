@@ -6,6 +6,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ListPageComponent } from './list-page/list-page.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
 
+//Declare routes
 const routes: Routes = [
   { path: 'home',  component: HomePageComponent },
   { path: 'home/list',  component: ListPageComponent },

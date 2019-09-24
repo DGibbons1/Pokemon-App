@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';  //Import routing module to allow rounting between components
 import { AppComponent } from './app.component';
+
+//Import Each Component
 import { HomePageComponent } from './home-page/home-page.component';
 import { ListPageComponent } from './list-page/list-page.component';
 import { DetailPageComponent } from './detail-page/detail-page.component';
