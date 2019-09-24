@@ -10,6 +10,7 @@ export class CurrentPokemonService {
 
   //Instance variables
   private currentPokemonURL: string;
+  private pokemonList: string[];
 
   constructor(private http: Http, private pokemonAPI: PokemonAPIService) { }
 
@@ -21,4 +22,14 @@ export class CurrentPokemonService {
   public getCurrentPokemonURL(): string{
     return this.currentPokemonURL;
   }
+
+  public setpokemonList(pokemonList: string[]){
+    this.pokemonList = pokemonList;
+  }
+
+  public getpokemonList(): string{
+    return JSON.stringify(this.pokemonList);
+  }
+
+
 }

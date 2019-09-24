@@ -18,12 +18,13 @@ export class ListPageComponent implements OnInit {
   ngOnInit() {
     //Call the pokemon API to get a list of pokemon.
     this.pokemonAPI.getPokemonList().subscribe(data=>{ 
-      this.pokemonList = data.results;     
+      this.pokemonList = data.results;
+      this.currentPokemon.setpokemonList(this.pokemonList);        
     })
   }
 
   //Method to open Pokemon details page with info about the selected Pokemon
-  public openPokemonDetail(url: string): void{
+  public openPokemonDetail(url: string): void{   
       this.currentPokemon.setCurrentPokemon(url); //Set the value of currentPokemon to the selected pokemon
       this.ac.openDetailPage();  //Navigate to the pokemon detail page
   }
