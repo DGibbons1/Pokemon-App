@@ -1,0 +1,11 @@
+.inputPadding{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.table-wrapper-scroll-y{
+    position: relative;
+    height: 600px;
+    overflow: auto;
+    display: block;
+}

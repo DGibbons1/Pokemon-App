@@ -1,0 +1,10 @@
+.topPadding{
+    margin-top: 25px;
+}
+
+.table-wrapper-scroll-y{
+    position: relative;
+    height: 400px;
+    overflow: auto;
+    display: block;
+}
