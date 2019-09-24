@@ -23,10 +23,4 @@ export class ListPageComponent implements OnInit {
     })
   }
 
-  //Method to open Pokemon details page with info about the selected Pokemon
-  public openPokemonDetail(url: string): void{   
-      this.currentPokemon.setCurrentPokemon(url); //Set the value of currentPokemon to the selected pokemon
-      this.ac.openDetailPage();  //Navigate to the pokemon detail page
-  }
-
 }

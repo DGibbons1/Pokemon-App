@@ -7,25 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'pokemon-app';
-  public currentPage: string = "home-page";
-
-  //Method to open the home page
-  public openHomePage(){
-    this.currentPage = "home-page";
-  }
-
-  //Method to open the Pokemon List page
-  public openListPage(){
-    this.currentPage = "list-page";
-  }
-
-  //Method to open the Pokemon detail page
-  public openDetailPage(){
-    this.currentPage = "detail-page";
-  }
-
-
-
+  title = 'Pokemon-App';
 
 }

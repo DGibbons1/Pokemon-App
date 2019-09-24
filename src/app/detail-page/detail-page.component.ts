@@ -11,7 +11,6 @@ import { ActivatedRoute } from '@angular/router';   //Import actived route to ge
 export class DetailPageComponent implements OnInit {
 
   //Instance variables
-  private currentPokemonURL: string;
   public name: string;
   public imgURL: string;
   public types: string[];
@@ -25,6 +24,7 @@ export class DetailPageComponent implements OnInit {
     this.pokemonJSON = JSON.parse(this.currentPokemon.getpokemonList());
     //Get and store the route parameter
     this.name = this.route.snapshot.params.id;
+
     //Loop through pokemonList to get url for selected Pokemon
     let i: number;
     for(i = 0; i < this.pokemonJSON.length; i++){
@@ -36,6 +36,8 @@ export class DetailPageComponent implements OnInit {
     window.scroll(0,0);
   }
 
+
+  //Method to get the data from the Pokemon API through the Pokemon API Service
   private getPokemonDetails(url: string){
     //Use the URL provided to get data from the Pokemon API Service
     this.pokemonAPI.getPokemonDetail(url).subscribe(data=>{

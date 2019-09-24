@@ -13,9 +13,4 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
   }
 
-  //Open the list page when the Go buttom=n is pressed.
-  public openListPage(){
-    this.ac.openListPage();
-  }
-
 }
